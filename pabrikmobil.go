@@ -5,12 +5,12 @@ import "fmt"
 const NMAX int = 500
 
 type pabrik struct {
-	nama     string //nama mobil
+	nama   string //nama mobil
 	pabrik string //nama pabrik
-	warna    string //warna mobil
-	tahun    int //tahun 
-	kode     int //kode mobil selalu berbeda tiap input untuk mempermudah pencarian data
-	jmlhPr   int //jumlah penjualan
+	warna  string //warna mobil
+	tahun  int    //tahun
+	kode   int    //kode mobil selalu berbeda tiap input untuk mempermudah pencarian data
+	jmlhPr int    //jumlah penjualan
 }
 
 type arrpabrik [NMAX]pabrik
@@ -18,7 +18,7 @@ type arrpabrik [NMAX]pabrik
 func main() {
 	var arr arrpabrik
 	var i int
-	var opsi, Pilih,PilihSearch int
+	var opsi, Pilih, PilihSearch int
 	Header()
 	fmt.Scan(&opsi)
 	for opsi != 7 {
@@ -32,16 +32,16 @@ func main() {
 				if Pilih == 1 {
 					printData(arr, i)
 				} else if Pilih == 2 {
-					sortingInsertion(&arr,i)
+					sortingInsertion(&arr, i)
 					printData(arr, i)
 				} else if Pilih == 3 {
-					sortingSelection(&arr,i)
-					printData(arr,i)
+					sortingSelection(&arr, i)
+					printData(arr, i)
 					fmt.Println("====== Masukan Selesai =======")
 				} else if Pilih == 4 {
-					sortingInsertion(&arr,i)
-					for b:=0;b<3;b++{
-						fmt.Printf("Nama pabrik: %v\t Nama mobil: %v\t Warna mobil: %v\t Tahun: %d\t Kode mobil: %d\t jumlah terjual: %d\n", arr[b].pabrik, arr[b].nama, arr[b].warna, arr[b].tahun, arr[b].kode,arr[b].jmlhPr)
+					sortingInsertion(&arr, i)
+					for b := 0; b < 3; b++ {
+						fmt.Printf("Nama pabrik: %v\t Nama mobil: %v\t Warna mobil: %v\t Tahun: %d\t Kode mobil: %d\t jumlah terjual: %d\n", arr[b].pabrik, arr[b].nama, arr[b].warna, arr[b].tahun, arr[b].kode, arr[b].jmlhPr)
 					}
 					fmt.Println("====== Masukan Selesai =======")
 				} else {
@@ -63,11 +63,11 @@ func main() {
 			fmt.Println("")
 			for PilihSearch != 3 {
 				if PilihSearch == 1 {
-					deleteDataBinary(&arr,&i)
+					deleteDataBinary(&arr, &i)
 				} else if PilihSearch == 2 {
 					deleteDataSeq(&arr, &i)
 				} else {
-					fmt.Println("Pilihan Search ", PilihSearch," Tidak tersedia")
+					fmt.Println("Pilihan Search ", PilihSearch, " Tidak tersedia")
 				}
 				header6()
 				fmt.Scan(&PilihSearch)
@@ -89,11 +89,11 @@ func inputData(arr *arrpabrik) int {
 
 	fmt.Println("Masukan Data")
 	fmt.Println("==================")
-	fmt.Print("Pabrik : ")
+	fmt.Print("Nama Pabrik : ")
 	fmt.Scan(&pabrik)
 	fmt.Print("Nama Mobil : ")
 	fmt.Scan(&nama)
-	fmt.Print("Warna : ") 
+	fmt.Print("Warna : ")
 	fmt.Scan(&warna)
 	fmt.Print("Tahun: ")
 	fmt.Scan(&tahun)
@@ -103,7 +103,7 @@ func inputData(arr *arrpabrik) int {
 	fmt.Scan(&jmlhPr)
 	fmt.Println("")
 
-	for pabrik != "None" && nama != "None" && warna != "None" && tahun != 0 && kode != 0  && jmlhPr != 0{
+	for pabrik != "None" && nama != "None" && warna != "None" && tahun != 0 && kode != 0 && jmlhPr != 0 {
 		arr[i].pabrik = pabrik
 		arr[i].nama = nama
 		arr[i].warna = warna
@@ -111,11 +111,11 @@ func inputData(arr *arrpabrik) int {
 		arr[i].kode = kode
 		arr[i].jmlhPr = jmlhPr
 		i++
-		fmt.Print("Pabrik : ")
+		fmt.Print("Nama Pabrik : ")
 		fmt.Scan(&pabrik)
 		fmt.Print("Nama Mobil : ")
 		fmt.Scan(&nama)
-		fmt.Print("Warna : ") 
+		fmt.Print("Warna : ")
 		fmt.Scan(&warna)
 		fmt.Print("Tahun: ")
 		fmt.Scan(&tahun)
@@ -153,7 +153,7 @@ func Header() {
 	fmt.Println("Masukan Opsi dibawah ini:")
 }
 
-func header2(){
+func header2() {
 	fmt.Println("Silahkan pilih Tampilan data yang dinginkan")
 	fmt.Println("1. Tampilkan Seluruh Data")
 	fmt.Println("2. Tampilkan Berdasarkan Jumlah Produk Mobil")
@@ -163,7 +163,7 @@ func header2(){
 	fmt.Println("Silakan pilih opsi yang diinginkan : ")
 }
 
-func header6(){
+func header6() {
 	fmt.Println("Silahkan pilih tipe searching yang ingin digunakan")
 	fmt.Println("1. Binary Search")
 	fmt.Println("2. Sequential Search")
@@ -174,15 +174,15 @@ func header6(){
 
 func inputDataAgain(arr *arrpabrik, startIdx int) int {
 	var pabrik, nama, warna string
-	var kode, tahun, i,jmlhPr int
+	var kode, tahun, i, jmlhPr int
 
 	fmt.Println("Masukan Data")
 	fmt.Println("==================")
-	fmt.Print("Pabrik : ")
+	fmt.Print("Nama Pabrik : ")
 	fmt.Scan(&pabrik)
 	fmt.Print("Nama Mobil : ")
 	fmt.Scan(&nama)
-	fmt.Print("Warna : ") 
+	fmt.Print("Warna : ")
 	fmt.Scan(&warna)
 	fmt.Print("Tahun: ")
 	fmt.Scan(&tahun)
@@ -194,7 +194,7 @@ func inputDataAgain(arr *arrpabrik, startIdx int) int {
 
 	i = startIdx
 
-	for pabrik != "None" && nama != "None" && warna != "None" && tahun != 0 && kode != 0  && jmlhPr != 0{
+	for pabrik != "None" && nama != "None" && warna != "None" && tahun != 0 && kode != 0 && jmlhPr != 0 {
 		arr[i].pabrik = pabrik
 		arr[i].nama = nama
 		arr[i].warna = warna
@@ -202,11 +202,11 @@ func inputDataAgain(arr *arrpabrik, startIdx int) int {
 		arr[i].kode = kode
 		arr[i].jmlhPr = jmlhPr
 		i++
-		fmt.Print("Pabrik : ")
+		fmt.Print("Nama Pabrik : ")
 		fmt.Scan(&pabrik)
 		fmt.Print("Nama Mobil : ")
 		fmt.Scan(&nama)
-		fmt.Print("Warna : ") 
+		fmt.Print("Warna : ")
 		fmt.Scan(&warna)
 		fmt.Print("Tahun: ")
 		fmt.Scan(&tahun)
@@ -225,7 +225,7 @@ func printData(arr arrpabrik, size int) {
 	fmt.Println("================")
 
 	for b := 0; b < size; b++ {
-		fmt.Printf("Nama pabrik: %v\t Nama mobil: %v\t Warna mobil: %v\t Tahun: %d\t Kode mobil: %d\t jumlah: %d\n", arr[b].pabrik, arr[b].nama, arr[b].warna, arr[b].tahun, arr[b].kode,arr[b].jmlhPr)
+		fmt.Printf("Nama pabrik: %v\t Nama mobil: %v\t Warna mobil: %v\t Tahun: %d\t Kode mobil: %d\t jumlah: %d\n", arr[b].pabrik, arr[b].nama, arr[b].warna, arr[b].tahun, arr[b].kode, arr[b].jmlhPr)
 	}
 	fmt.Println("")
 }
@@ -357,11 +357,11 @@ func seqSeacrh(arr arrpabrik, size, kode int) int {
 	}
 }
 
-func sortingInsertion(arr *arrpabrik,size int){
-	//melakukan sorting berdasarkan jumlah mobil 
+func sortingInsertion(arr *arrpabrik, size int) {
+	//melakukan sorting berdasarkan jumlah mobil
 	var pass, i int
 	var merah pabrik
-	for pass = 1 ; pass < size ; pass++{
+	for pass = 1; pass < size; pass++ {
 		i = pass
 		merah = arr[i]
 		for i > 0 && merah.jmlhPr > arr[i-1].jmlhPr {
@@ -372,11 +372,11 @@ func sortingInsertion(arr *arrpabrik,size int){
 	}
 }
 
-func sortingInsertion_kode(arr *arrpabrik,size int){
+func sortingInsertion_kode(arr *arrpabrik, size int) {
 	//melakukan sorting berdasarkan kode mobil descending
 	var pass, i int
 	var merah pabrik
-	for pass = 1 ; pass < size ; pass++{
+	for pass = 1; pass < size; pass++ {
 		i = pass
 		merah = arr[i]
 		for i > 0 && merah.kode > arr[i-1].kode {
@@ -385,17 +385,17 @@ func sortingInsertion_kode(arr *arrpabrik,size int){
 		}
 		arr[i] = merah
 	}
-	printData(*arr,size)
+	printData(*arr, size)
 }
 
-func sortingSelection(arr *arrpabrik, size int){
+func sortingSelection(arr *arrpabrik, size int) {
 	//melakukan soring berdasarkan tahun keluar ascending
-	var i,j,maxIndx int
+	var i, j, maxIndx int
 	var temp pabrik
-	for i = 0; i< size-1;i++{
+	for i = 0; i < size-1; i++ {
 		maxIndx = i
-		for j=i+1;j<size;j++{
-			if arr[j].tahun < arr[maxIndx].tahun{
+		for j = i + 1; j < size; j++ {
+			if arr[j].tahun < arr[maxIndx].tahun {
 				maxIndx = j
 			}
 		}
@@ -407,17 +407,17 @@ func sortingSelection(arr *arrpabrik, size int){
 }
 
 func binarySearch(arr arrpabrik, size, kode int) int {
-	var left,right,mid,found int
+	var left, right, mid, found int
 	left = 0
-	right = size-1
+	right = size - 1
 	found = -1
 
-	for left <= right && found == -1{
+	for left <= right && found == -1 {
 		mid = (left + right) / 2
 		if kode < arr[mid].kode {
 			left = mid + 1
-		} else if  kode > arr[mid].kode {
-			right = mid -1 
+		} else if kode > arr[mid].kode {
+			right = mid - 1
 		} else {
 			found = mid
 		}
@@ -427,7 +427,7 @@ func binarySearch(arr arrpabrik, size, kode int) int {
 
 func deleteDataBinary(arr *arrpabrik, size *int) {
 	var kode, j, idx int
-	sortingInsertion_kode(arr,*size)
+	sortingInsertion_kode(arr, *size)
 	fmt.Println("=================")
 	fmt.Println("Hapus Data")
 	fmt.Println("=================")
@@ -435,7 +435,7 @@ func deleteDataBinary(arr *arrpabrik, size *int) {
 	fmt.Println("Masukan Kode Mobil:")
 	fmt.Scan(&kode)
 	fmt.Println("")
-	idx = binarySearch(*arr,*size,kode)
+	idx = binarySearch(*arr, *size, kode)
 
 	if idx == -1 {
 		fmt.Println("Data Tidak Ditemukan")
@@ -446,13 +446,13 @@ func deleteDataBinary(arr *arrpabrik, size *int) {
 		*size--
 		fmt.Println("Data berhasil dihapus")
 	}
-	printData(*arr,*size)
+	printData(*arr, *size)
 }
 
 func deleteDataSeq(arr *arrpabrik, size *int) {
 	var kode, j, idx int
 
-	printData(*arr,*size)
+	printData(*arr, *size)
 
 	fmt.Println("=================")
 	fmt.Println("Hapus Data")
@@ -475,6 +475,5 @@ func deleteDataSeq(arr *arrpabrik, size *int) {
 		fmt.Println("Data berhasil dihapus")
 		fmt.Println("")
 	}
-	printData(*arr,*size)
+	printData(*arr, *size)
 }
-
