@@ -1,5 +1,5 @@
 ## tipe Data
-1. nama   :string //nama mobil
+1. nama   : string //nama mobil
 2. pabrik : string //nama pabrik
 3. warna  : string //warna mobil
 4. tahun  : int //tahun 
