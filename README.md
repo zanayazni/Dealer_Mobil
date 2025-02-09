@@ -3,7 +3,7 @@
 2. pabrik : string //nama pabrik
 3. warna  : string //warna mobil
 4. tahun  : int //tahun 
-5. kode   : int //kode mobil selalu unik
+5. kode   : int //kode mobil selalu unik tidak boleh ada yang sama
 6. jmlhPr : int //jumlah penjualan
 
  ## Stop Input Data
