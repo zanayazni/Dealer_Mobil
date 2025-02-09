@@ -1,8 +1,8 @@
 ## tipe Data
 1. nama   : string //nama mobil
 2. pabrik : string 
-3. warna  : string warna mobil
-4. tahun  : int //tahun 
+3. warna  : string //warna mobil
+4. tahun  : int 
 5. kode   : int //kode mobil selalu unik tidak boleh ada yang sama
 6. jmlhPr : int //jumlah penjualan
 
