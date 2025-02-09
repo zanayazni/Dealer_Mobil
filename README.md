@@ -1,10 +1,10 @@
 ## tipe Data
-1. nama     string //nama mobil
-2. pabrik string //nama pabrik
-3. warna    string //warna mobil
-4. tahun    int //tahun 
-5. kode     int //kode mobil selalu unik
-6. jmlhPr   int //jumlah penjualan
+1. nama   :string //nama mobil
+2. pabrik : string //nama pabrik
+3. warna  : string //warna mobil
+4. tahun  : int //tahun 
+5. kode   : int //kode mobil selalu unik
+6. jmlhPr : int //jumlah penjualan
 
  ## Stop Input Data
  1. Pabrik = None
