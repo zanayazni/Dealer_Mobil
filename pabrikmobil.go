@@ -210,7 +210,7 @@ func inputDataAgain(arr *arrpabrik, startIdx int) int {
 		fmt.Scan(&warna)
 		fmt.Print("Tahun: ")
 		fmt.Scan(&tahun)
-		fmt.Print("kode : ")
+		fmt.Print("Kode : ")
 		fmt.Scan(&kode)
 		fmt.Print("jumlah produk yang terjual : ")
 		fmt.Scan(&jmlhPr)
