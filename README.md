@@ -13,5 +13,3 @@
  4. tahun = 0
  5. kode = 0
  6. jumlah produk yang terjual = 0
-
- 7. stop
