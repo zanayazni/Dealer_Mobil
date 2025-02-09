@@ -1,15 +1,15 @@
 ## tipe Data
-  nama     string //nama mobil
-	pabrik string //nama pabrik
-	warna    string //warna mobil
-	tahun    int //tahun 
-	kode     int //kode mobil selalu uniq
-	jmlhPr   int //jumlah penjualan
+1. nama     string //nama mobil
+2. pabrik string //nama pabrik
+3. warna    string //warna mobil
+4. tahun    int //tahun 
+5. kode     int //kode mobil selalu uniq
+6. jmlhPr   int //jumlah penjualan
 
  ## Stop Input Data
- Pabrik = None
- Nama mobil = None
- warna = None
- tahun = 0
- kode = 0
- jumlah produk yang terjual = 0
+ 1. Pabrik = None
+ 2. Nama mobil = None
+ 3. warna = None
+ 4. tahun = 0
+ 5. kode = 0
+ 6. jumlah produk yang terjual = 0
